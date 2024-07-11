@@ -48,3 +48,14 @@ let activeIndex = 0;
 const cards = document.querySelectorAll(".carousel-image");
 
 cards[activeIndex].classList.remove("d-none");
+
+nextBtn.addEventListener("click", function () {
+  cards[activeIndex].classList.add("d-none");
+
+  if (activeIndex == images.length - 1) {
+    activeIndex = 0;
+  } else {
+    activeIndex++;
+  }
+  cards[activeIndex].classList.remove("d-none");
+});
