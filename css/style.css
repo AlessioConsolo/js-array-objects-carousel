@@ -69,3 +69,7 @@ p {
 h2 {
   padding-bottom: 5px;
 }
+
+.d-none {
+  display: none;
+}

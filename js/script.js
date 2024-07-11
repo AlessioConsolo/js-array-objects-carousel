@@ -30,7 +30,7 @@ let carousel = document.querySelector(".carousel");
 let carouselContent = "";
 
 images.forEach((elem) => {
-  carousel.innerHTML += `<div class="carousel-image">
+  carousel.innerHTML += `<div class="carousel-image d-none">
       <img src="${elem.image}" alt="Carousel Image" />
           <div class="carousel-content">
             <h2>${elem.title}</h2>
@@ -39,3 +39,12 @@ images.forEach((elem) => {
      </div>
         `;
 });
+
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+let activeIndex = 0;
+
+const cards = document.querySelectorAll(".carousel-image");
+
+cards[activeIndex].classList.remove("d-none");
