@@ -59,3 +59,14 @@ nextBtn.addEventListener("click", function () {
   }
   cards[activeIndex].classList.remove("d-none");
 });
+
+prevBtn.addEventListener("click", function () {
+  cards[activeIndex].classList.add("d-none");
+
+  if (activeIndex === 0) {
+    activeIndex == images.length - 1;
+  } else {
+    activeIndex--;
+  }
+  cards[activeIndex].classList.remove("d-none");
+});
