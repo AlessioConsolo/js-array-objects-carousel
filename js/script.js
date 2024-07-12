@@ -27,7 +27,6 @@ const images = [
 ];
 
 let carousel = document.querySelector(".carousel");
-let carouselContent = "";
 
 images.forEach((elem) => {
   carousel.innerHTML += `<div class="carousel-image d-none">
@@ -63,8 +62,8 @@ nextBtn.addEventListener("click", function () {
 prevBtn.addEventListener("click", function () {
   cards[activeIndex].classList.add("d-none");
 
-  if (activeIndex === 0) {
-    activeIndex == images.length - 1;
+  if (activeIndex == 0) {
+    activeIndex = images.length - 1;
   } else {
     activeIndex--;
   }
